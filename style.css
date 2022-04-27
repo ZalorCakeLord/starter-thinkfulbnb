@@ -5,20 +5,30 @@ body {
 }
 
 h2 {
-  font-size: 26px;
+  font-size: 200%;
   font-weight: 400;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 125%;
+  font-weight: 700;
+  margin-left:6%;
 }
 
 p {
+  font-size: 111%;
   line-height: 1.5em;
   margin: 0;
+  font-weight: 650;
+  margin-left:6%;
+  margin-right:7%
+}
+
+main ul li{
+  margin-left: 8%;
+  margin-right: 8%
 }
 
 section {
@@ -28,13 +38,20 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+  display:flex;
+  flex-direction:column;
+  
 }
 
 main img {
-  width: 100px;
+  display:flex;
+  margin-left:6%;
+  margin-bottom:3.8%;
+  width: 88%;
 }
 
 /* ---  Groups & Items --- */
+
 
 .group {
   display: flex;
@@ -64,6 +81,12 @@ header {
   color: #fff;
 }
 
+header nav ul {
+  display:flex;
+  flex-direction:row;
+  justify-content:center;
+  flex-wrap: wrap;
+}
 header nav ul li {
   list-style-type: none;
 }
@@ -72,6 +95,9 @@ header nav ul li a {
   color: #fff;
   text-decoration: none;
   padding: 0 20px 0 0;
+  font-size: 200%;
+  text-decoration: none;
+  margin: 0 20px 0 0;
 }
 
 header nav ul li a:hover {
@@ -83,6 +109,14 @@ header nav ul li a:hover {
 form {
   border: 2px solid #ff385c;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:wrap
 }
 
 form label {
@@ -92,14 +126,14 @@ form label {
 form select,
 form input {
   margin-bottom: 20px;
-  width: 180px;
+  min-width:50px
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 24px;
+  font-size: 7vw;
   padding: 15px;
   width: 100%;
 }
@@ -117,3 +151,71 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+  header h1 {
+      margin: 14px 0;
+      padding-top: 6px;
+    }
+  
+    header nav {
+      margin-top: 14px;
+    }
+  
+
+  header nav ul li a {
+    font-size: 150%;
+  }
+
+  .pictures-about{
+    display:flex;
+    margin-left:0.3%;
+    
+  }
+  .pictures-about p {
+    font-size:103%;
+    margin-top:2.5%
+  }
+  .pictures-about img {
+    width:24%;
+    margin-left:2%
+  }
+
+  .pictures-ideas{
+    display: flex;
+  }
+  .pictures-ideas div img{
+    max-width:1200px;
+  }
+  form {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  form input{
+    width:75%
+  }
+
+  form button {
+    font-size: 24px;
+    align-self: flex-end;
+  }
+  #host {
+    display:flex;
+    flex-direction: row;
+  }
+  #host img{
+    max-width:1200px
+  }
+}
