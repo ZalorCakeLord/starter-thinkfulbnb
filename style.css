@@ -231,6 +231,7 @@ footer p {
     flex-direction: row;
   }
   #host img{
-    max-width:1200px
+    max-width: 2000px;
+    flex: 1 1 50%
   }
 }
