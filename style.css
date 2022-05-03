@@ -119,14 +119,15 @@ form div {
   flex-wrap:wrap
 }
 
-form label {
-  font-weight: bold;
+form select, form input {
+  margin-bottom: 20px;
+  min-width: 50px;
+  flex: 1 1 50%;
 }
 
-form select,
-form input {
-  margin-bottom: 20px;
-  min-width:50px
+form label {
+  font-weight: bold;
+  flex: 1 1 40%;
 }
 
 form button {
