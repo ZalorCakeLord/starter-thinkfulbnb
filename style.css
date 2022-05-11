@@ -167,84 +167,119 @@ footer p {
 /* -------  Media Query ------- */
 
 @media all and (min-width: 480px) {
- .logo {
-    font-size: 72px;
-  }
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-  header nav ul {
-    margin: 30px 0 0;
-    justify-content: flex-start;
+  .logo {
+    font-size: 5vw;
+    align-self: center;
+    padding-bottom: 20px;
   }
 
-  form {
+  .menu {
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-  }
-
-  form div {
-    flex-direction: column;
-  }
-
-  form select,
-  form input {
-  width: 100%
-}
-
-  form button {
-    font-size: 24px;
-    align-self: flex-end;
-  }
-
-
-  .pictures-about{
-    display:flex;
-    margin-left:0.3%;
     
   }
-  .pictures-about p {
-    font-size:103%;
-    margin-top:2.5%
-  }
-  .pictures-about img {
-    width:24%;
-    margin-left:2%
-  }
-
-  .pictures-ideas{
+  #menu {
     display: flex;
-  }
-  .pictures-ideas div img{
-    max-width:1200px;
-  }
-  form {
-    display:flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  #menu .item {
+    margin-right: 10px;
+  }
+  header nav ul:last-child {
+    margin-right: 0;
+  }
+  header nav ul li a {
+    font-size: 2vw;
+  }
+  form .menuItem {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 15px;
+  }
+  .menu button {
+    width: 15%;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 40px 0;
   }
 
-  form div {
+  header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+.item{
+  width: 50%;
+  align-self: center;
+}
+
+  #about img {
+    width: 25%;
+    margin: 10px;
+    height: 25%;
+    align-self: center;
+  }
+  main img{
+    width: 100px;
+  }
+  #about p {
+    display: flex;
+    align-self: center;
+  }
+
+  #ideas img {
+    width: 50%;
+  }
+
+  #ideas .group {
+    justify-content: space-between;
     flex-direction: column;
   }
 
-  form input{
-    width:75%
+  #ideas .group .menu {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    flex-wrap: nowrap;
   }
 
-  form button {
-    font-size: 24px;
-    align-self: flex-end;
+  #ideas .group .menu div img {
+    width: 100%;
+    max-width: 1200px;
   }
-  #host {
-    display:flex;
-    flex-direction: row;
+
+  #host img {
+    width: 50%;
+    margin: 10px;
+    height: 50%;
+    align-self: center;
+    
   }
-  #host img{
-    max-width: 2000px;
-    flex: 1 1 50%
+
+  #host .group div {
+    align-self: center;
+    text-align: left;
+    justify-self: center;
+  }
+  .forest,
+  .rustic {
+    margin: 0 10px 0 0;
   }
 }
