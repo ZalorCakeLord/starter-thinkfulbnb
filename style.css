@@ -1,57 +1,75 @@
-/* -------  General Styles ------- */
+/* -------  General Styles -------*/
 
 body {
   font-family: "Lato", sans-serif;
 }
 
 h2 {
-  font-size: 200%;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 550;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
-  font-size: 125%;
-  font-weight: 700;
-  margin-left:6%;
+  font-size: 18px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 p {
-  font-size: 111%;
   line-height: 1.5em;
   margin: 0;
-  font-weight: 650;
-  margin-left:6%;
-  margin-right:7%
-}
-
-main ul li{
-  margin-left: 8%;
-  margin-right: 8%
 }
 
 section {
   padding: 20px;
 }
 
+section img {
+  margin: 15px 0;
+}
+#about p {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 550;
+}
+#about h2 {
+  font-size: clamp(18px, 4vw, 26px);
+}
+#ideas img {
+  margin: -5px 0;
+}
+#ideas h2 {
+  font-size: clamp(14px, 4vw, 26px);
+}
+#ideas h3 {
+  font-size: clamp(10px, 4vw, 18px);
+}
+#host ul{
+  margin: -5px;
+  justify-content: left;
+}
+#host p {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 500;
+}
+#host ul li {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 500;
+}
+#host h2 {
+  font-size: clamp(16px, 4vw, 26px);
+}
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
-  display:flex;
-  flex-direction:column;
-  
 }
 
 main img {
-  display:flex;
-  margin-left:6%;
-  margin-bottom:3.8%;
-  width: 88%;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
-
 
 .group {
   display: flex;
@@ -81,6 +99,9 @@ form .menuItem {
 }
 
 /* -------  Navigation ------- */
+#menu .item {
+  margin: 0px;
+}
 
 header {
   background-color: #ff385c;
@@ -90,15 +111,12 @@ header {
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 16vw;
   color: #fff;
 }
 
-header nav ul {
-  display:flex;
-  flex-direction:row;
-  justify-content:center;
-  flex-wrap: wrap;
+header nav ul:first-child {
+  margin-right: 30px;
 }
 header nav ul li {
   list-style-type: none;
@@ -107,10 +125,9 @@ header nav ul li {
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
-  font-size: 200%;
-  text-decoration: none;
-  margin: 0 20px 0 0;
+  padding: 0;
+
+  font-size: clamp(8px, 4vw, 18px);
 }
 
 header nav ul li a:hover {
@@ -118,36 +135,43 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+}
+#menu .item {
+  margin-right: 0px;
+}
 /* -------  Search Form ------- */
+#stay h2 {
+  font-size: clamp(14px, 4vw, 26px);
+}
 form {
   border: 2px solid #ff385c;
   padding: 10px;
-  display: flex;
-  flex-direction: column;
-}
-
-form div {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap:wrap
-}
-
-form select, form input {
-  margin-bottom: 20px;
-  min-width: 50px;
-  flex: 1 1 50%;
 }
 
 form label {
+  font-size: clamp(8px, 4vw, 18px);
   font-weight: bold;
-  flex: 1 1 40%;
+}
+
+form select,
+form input {
+  margin-bottom: 20px;
+  width: 180px;
+  font-size: clamp(8px, 4vw, 18px);
 }
 
 form button {
   background-color: #ff385c;
   border: none;
   color: #fff;
-  font-size: 7vw;
+  font-size: 24px;
   padding: 15px;
   width: 100%;
 }
@@ -162,6 +186,8 @@ footer p {
   color: #fff;
   text-align: center;
   padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* -------  Media Query ------- */
