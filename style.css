@@ -56,15 +56,28 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 .item {
-  flex: 1;
+  flex-grow: 1;
   margin: 10px;
+  width: 100%;
 }
 
 .item-double {
   flex: 2;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+form .menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 /* -------  Navigation ------- */
