@@ -1,18 +1,19 @@
-/* -------  General Styles ------- */
+/* -------  General Styles -------*/
 
 body {
   font-family: "Lato", sans-serif;
 }
 
 h2 {
-  font-size: 26px;
-  font-weight: 400;
+  font-size: 40px;
+  font-weight: 550;
   margin: 0 10px 10px 10px;
   text-align: center;
 }
 
 h3 {
   font-size: 18px;
+  font-size: 24px;
   font-weight: 500;
 }
 
@@ -25,17 +26,47 @@ section {
   padding: 20px;
 }
 
+section img {
+  margin: 15px 0;
+}
+#about p {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 550;
+}
+#about h2 {
+  font-size: clamp(18px, 4vw, 26px);
+}
+#ideas img {
+  margin: -5px 0;
+}
+#ideas h2 {
+  font-size: clamp(14px, 4vw, 26px);
+}
+#ideas h3 {
+  font-size: clamp(10px, 4vw, 18px);
+}
+#host ul{
+  margin: -5px;
+  justify-content: left;
+}
+#host p {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 500;
+}
+#host ul li {
+  font-size: clamp(10px, 4vw, 18px);
+  font-weight: 500;
+}
+#host h2 {
+  font-size: clamp(16px, 4vw, 26px);
+}
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
 }
 
 main img {
-  max-width: 100%;
-  margin-top: 4px;
-  margin-bottom:16px;
-  
-  margin-right:16px;
+  width: 100%;
 }
 
 /* ---  Groups & Items --- */
@@ -43,53 +74,60 @@ main img {
 .group {
   display: flex;
   flex-direction: column;
+  margin: 20px;
 }
 
 .item {
-  flex: 1;
+  flex-grow: 1;
   margin: 10px;
+  width: 100%;
 }
 
 .item-double {
   flex: 2;
 }
 
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+form .menuItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 /* -------  Navigation ------- */
+#menu .item {
+  margin: 0px;
+}
 
 header {
   background-color: #ff385c;
   padding: 20px 20px 0 20px;
   text-align: center;
-  position:relative;
-}
-.containerForLogo{
-    display:flex;
-    flex-wrap:wrap;
-  
-    justify-content: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 58px;
+  font-size: 16vw;
   color: #fff;
-  
-}
-.menu{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
 }
 
+header nav ul:first-child {
+  margin-right: 30px;
+}
 header nav ul li {
   list-style-type: none;
-  
 }
 
 header nav ul li a {
   color: #fff;
   text-decoration: none;
-  padding: 0 20px 0 0;
+  padding: 0;
+
+  font-size: clamp(8px, 4vw, 18px);
 }
 
 header nav ul li a:hover {
@@ -97,18 +135,28 @@ header nav ul li a:hover {
   text-decoration: none;
 }
 
+#menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
+  padding-bottom: 20px;
+  justify-content: space-evenly;
+}
+#menu .item {
+  margin-right: 0px;
+}
 /* -------  Search Form ------- */
+#stay h2 {
+  font-size: clamp(14px, 4vw, 26px);
+}
 form {
   border: 2px solid #ff385c;
   padding: 10px;
 }
-.parentL{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 form label {
+  font-size: clamp(8px, 4vw, 18px);
   font-weight: bold;
 }
 
@@ -116,6 +164,7 @@ form select,
 form input {
   margin-bottom: 20px;
   width: 180px;
+  font-size: clamp(8px, 4vw, 18px);
 }
 
 form button {
@@ -137,75 +186,126 @@ footer p {
   color: #fff;
   text-align: center;
   padding: 20px;
+  font-size: 24px;
+  font-weight: 500;
 }
 
 /* -------  Media Query ------- */
-@media all and (min-width:480px){
-  /*------- Navigation and Logo ------- */
-  .logo{
-    font-size: 72px;
+
+@media all and (min-width: 480px) {
+  .logo {
+    font-size: 5vw;
+    align-self: center;
+    padding-bottom: 20px;
   }
-  .containerForLogo{
-    justify-content:flex-start;
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
   }
-  .menu{
-    justify-content:flex-end;
-}
-/* -------- The Form -------- */
-form{
-  
-  display:flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  
-}
-.parentL{
-  flex-direction: column;
-}
-/*-------- Images --------*/
-.groupAbout{
-  display:flex;
-  flex-wrap: wrap;
-  margin-top: 20px;
-}
-.image{
-  flex: 1;
-  margin-right:7px;
-  margin-left:7px;
-  align-self: center;
-  width:100px;
-  
-}
-.halfTheContainer{
-  flex:2;
-  margin-right:15px;
-  margin-left:7px;
-  max-width:100%;
-  
-}
-.grid2x2{
-  min-height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-}
-.imageIdeas{
-  display: flex; 
-  flex-basis: calc(50% - 40px);  
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 30px;
-  
-}
-.groupHost{
-  display:flex;
-  flex-direction: row;
-  margin-top:20px;
-}
-.halfAndHalf{
-  flex:1;
-  margin-left:7px;
-  margin-right:7px;
+  #menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-bottom: 0;
+    margin-top: 30px;
+  }
+  #menu .item {
+    margin-right: 10px;
+  }
+  header nav ul:last-child {
+    margin-right: 0;
+  }
+  header nav ul li a {
+    font-size: 2vw;
+  }
+  form .menuItem {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0 0 15px;
+  }
+  .menu button {
+    width: 15%;
+    text-align: center;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 0 40px 0;
+  }
+
+  header {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .group {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+  }
+.item{
+  width: 50%;
   align-self: center;
 }
+
+  #about img {
+    width: 25%;
+    margin: 10px;
+    height: 25%;
+    align-self: center;
+  }
+  main img{
+    width: 100px;
+  }
+  #about p {
+    display: flex;
+    align-self: center;
+  }
+
+  #ideas img {
+    width: 50%;
+  }
+
+  #ideas .group {
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  #ideas .group .menu {
+    display: flex;
+    flex-direction: row;
+    margin: 0 10px;
+    flex-wrap: nowrap;
+  }
+
+  #ideas .group .menu div img {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  #host img {
+    width: 50%;
+    margin: 10px;
+    height: 50%;
+    align-self: center;
+    
+  }
+
+  #host .group div {
+    align-self: center;
+    text-align: left;
+    justify-self: center;
+  }
+  .forest,
+  .rustic {
+    margin: 0 10px 0 0;
+  }
 }
